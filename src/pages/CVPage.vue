@@ -5,12 +5,12 @@
       <span id="caption" class="col-12 text-small text-center" v-html="summaryHtml">
       </span>
       <HighlightsComponent :highlights="audienceData.highlights" v-if="audienceData.highlights" />
+      <SkillsComponent :skills="audienceData.skills" />
       <div class="row">
         <div class="col-8 left-hand-side">
           <JobsComponent :jobs="audienceData.jobs" />
         </div>
         <section class="col-4 right-hand-side">
-          <SkillsComponent :skills="audienceData.skills" />
           <ProjectsComponent :projects="audienceData.projects" />
         </section>
       </div>

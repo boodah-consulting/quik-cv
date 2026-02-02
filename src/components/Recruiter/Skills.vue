@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div class="text-h6 col row text-centre text-weight-bolder">Skills</div>
-    <ul id="skills" class="flex row">
+  <div id="skills">
+    <div class="text-h6 col row text-weight-bolder">Skills</div>
+    <ul id="skills-list" class="flex row">
       <SkillEntry v-for="skill in this.sortedSkills" :key="skill" :skill="skill" />
     </ul>
   </div>

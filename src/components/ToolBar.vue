@@ -4,15 +4,22 @@
       class="bg-primary text-white shadow-2"
       :class="{ 'floating-toolbar': isScrolled }"
     >
-      <q-btn flat round dense icon="menu" class="q-mr-sm" />
-      <q-separator dark vertical inset />
-      <q-space />
-      <q-breadcrumbs active-color="white" style="font-size: 16px">
-        <q-breadcrumbs-el icon="home" label="Home" :to="{ path: '/' }" />
-        <q-breadcrumbs-el 
-          :label="currentPage" 
-          v-if="isLandingPage === false && currentPage" 
-        />
+    <q-btn 
+      flat 
+      round 
+      :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'" 
+      @click="toggleDarkMode"
+      class="q-mr-sm"
+    >
+      <q-tooltip>{{ $q.dark.isActive ? 'Light Mode' : 'Dark Mode' }}</q-tooltip>
+    </q-btn>
+
+    <q-separator dark vertical inset class="q-mr-sm" />
+
+    <q-space />
+
+    <q-breadcrumbs active-color="#CE4479" style="font-size: 16px" class="justify-center">
+        <q-breadcrumbs-el icon="home" label="Home" :to="{ name: 'LandingPage' }" />
         <q-breadcrumbs-el 
           :label="currentProfile" 
           v-if="currentProfile" 
@@ -21,71 +28,31 @@
 
       <q-space />
 
-      <q-btn 
-        flat 
-        round 
-        :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'" 
-        @click="toggleDarkMode"
-      >
-        <q-tooltip>{{ $q.dark.isActive ? 'Light Mode' : 'Dark Mode' }}</q-tooltip>
-      </q-btn>
-
-      <q-separator dark vertical inset class="q-ml-sm" />
-
-      <q-space />
-
       <q-btn-dropdown stretch flat icon="account_circle">
         <q-list>
-          <q-item-label header>Quick Actions</q-item-label>
-          <q-item
-            clickable
-            v-close-popup
-            @click="$router.push({ name: 'ProfileSelection' })"
-            tabindex="0"
-          >
-            <q-item-section avatar>
-              <q-avatar icon="folder" color="primary" text-color="white" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>Select Profile</q-item-label>
-            </q-item-section>
-          </q-item>
-
-          <q-item 
-            v-if="selectedProfile" 
-            clickable 
-            v-close-popup
-            @click="$router.push({ name: 'LandingPage' })"
-          >
-            <q-item-section avatar>
-              <q-avatar icon="home" color="secondary" text-color="white" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>Home</q-item-label>
-            </q-item-section>
-          </q-item>
-
-          <q-separator v-if="profiles.length > 0" />
-
-          <q-item-label header v-if="profiles.length > 0">Available Profiles</q-item-label>
-          <q-item
-            v-for="profile in profiles"
-            :key="profile.name"
-            clickable
-            v-close-popup
-            @click="selectProfileAndNavigate(profile.name)"
-            tabindex="0"
-          >
-            <q-item-section avatar>
-              <q-avatar icon="person" color="accent" text-color="white" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>{{ formatProfileName(profile.name) }}</q-item-label>
-              <q-item-label caption>
-                {{ profile.audiences.length }} audience types
-              </q-item-label>
-            </q-item-section>
-          </q-item>
+          <q-item-label header>Select CV</q-item-label>
+          <template v-for="profile in profiles" :key="profile.name">
+            <q-expansion-item
+              :label="formatProfileName(profile.name)"
+              icon="folder"
+              color="primary"
+              header-class="text-primary text-weight-bold"
+            >
+              <q-item
+                v-for="audience in profile.audiences"
+                :key="audience.type"
+                clickable
+                v-close-popup
+                @click="handleAudienceSelect(profile.name, audience.type)"
+                tabindex="0"
+                class="q-pl-lg"
+              >
+                <q-item-section>
+                  <q-item-label>{{ audience.title }}</q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-expansion-item>
+          </template>
         </q-list>
       </q-btn-dropdown>
     </q-toolbar>
@@ -124,11 +91,6 @@ import { useProfileService } from '@/composables/useProfileService'
 export default {
   name: 'ToolBar',
   props: {
-    items: {
-      type: Array,
-      required: false,
-      default: () => []
-    },
     currentPage: {
       type: String,
       required: false,
@@ -148,7 +110,8 @@ export default {
     const {
       profiles,
       selectedProfile,
-      selectProfile
+      selectProfile,
+      selectAudience
     } = useProfileService()
 
     const handleScroll = () => {
@@ -170,7 +133,19 @@ export default {
 
     const selectProfileAndNavigate = (profileName) => {
       selectProfile(profileName)
-      router.push({ name: 'ProfileSelection' })
+      router.push({ name: 'LandingPage' })
+    }
+
+    const handleAudienceSelect = async (profileName, audienceType) => {
+      selectProfile(profileName)
+      await selectAudience(audienceType)
+      router.push({
+        name: 'CVPage',
+        params: {
+          profile: profileName,
+          audience: audienceType
+        }
+      })
     }
 
     const toggleDarkMode = () => {
@@ -197,6 +172,7 @@ export default {
       currentProfile,
       formatProfileName,
       selectProfileAndNavigate,
+      handleAudienceSelect,
       toggleDarkMode,
       $q
     }

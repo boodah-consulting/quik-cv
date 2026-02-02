@@ -83,8 +83,40 @@ body
   .highlight-chip
     border: 1px solid #ccc !important
     background: white !important
+    color: black !important
     -webkit-print-color-adjust: exact
     print-color-adjust: exact
+
+  #skills
+    width: 100% !important
+    margin-top: 8px !important
+    margin-bottom: 8px !important
+
+  #skills-list
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+  #skills-list li.skill
+    display: inline !important
+    padding: 2px 4px
+    color: black !important
+    font-family: Georgia, "Times New Roman", Times, serif
+    font-size: 11pt
+    margin-right: 8px
+
+  #skills-list li.skill b
+    color: #333
+
+  .left-hand-side
+    width: 65% !important
+    float: left !important
+    clear: none !important
+
+  .right-hand-side
+    width: 33% !important
+    float: right !important
+    clear: none !important
 
   a[href^="http"]:after
     content: " (" attr(href) ")"

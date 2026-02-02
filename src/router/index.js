@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import LandingPagePage from "@/pages/LandingPage.vue"
-import ProfileSelectionPage from '@/pages/ProfileSelectionPage.vue'
 import CVPage from '@/pages/CVPage.vue'
 
 const routes = [
@@ -12,14 +11,6 @@ const routes = [
       title: 'Home',
     },
     component: LandingPagePage,
-  },
-  {
-    path: '/profiles',
-    name: 'ProfileSelection',
-    meta: {
-      title: 'Select Profile',
-    },
-    component: ProfileSelectionPage,
   },
   {
     path: '/cv/:profile/:audience',
