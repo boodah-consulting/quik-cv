@@ -33,8 +33,10 @@
   border-left: none !important;
 }
 
-.body--dark .highlight-chip {
-  color: white !important;
+@media print {
+  .body--dark .highlight-chip {
+    color: black !important;
+  }
 }
 </style>
 
