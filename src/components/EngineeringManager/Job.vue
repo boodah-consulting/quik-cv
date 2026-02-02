@@ -11,7 +11,7 @@
         {{ job.position }}
       </span>
     </div>
-    <div class="col-4 job-dates text-subtitle2 text-right">
+    <div class="col job-dates text-subtitle2 text-right">
       <span class="job-start-date">
         {{ job.start_date }}
       </span>

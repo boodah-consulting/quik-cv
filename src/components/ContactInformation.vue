@@ -1,19 +1,19 @@
 <template>
   <div class="row" id="wrapper">
     <div class="col text-h2" id="personal-details">
-      <div id="name">
-        <span class="first-name">{{ firstName }}</span> <span class="last-name">{{ lastName }}</span>
+      <div id="name" class="q-pl-xl">
+        <span class="q-pl-xl first-name">{{ firstName }}</span> <span class="last-name">{{ lastName }}</span>
       </div>
     </div>
-    <div class="col-2 q-my-md q-mr-md" id="contact-details">
-      <span class="col" id="email">
-        {{ email }}
-      </span>
-      <div class="col" id="phone">
-        {{ phone }}
+    <div id="contact-details">
+      <div class="justify-center q-my-md q-mr-md">
+        <div class="col" id="email"> {{ email }} </div>
+        <div class="col" id="phone"> {{ phone }} </div>
       </div>
     </div>
   </div>
+  <span class="row justify-center" id="location">{{ location }}</span>
+  <span class="row justify-center" id="github">{{ github }} </span>
 </template>
 
 <style></style>
@@ -33,8 +33,8 @@ import contactDetails from './../data/contact_details.json'
  */
 export default {
   name: 'ContactInformation',
-  data: function() {
+  data: function () {
     return { ...contactDetails };
-  }
+  },
 }
 </script>

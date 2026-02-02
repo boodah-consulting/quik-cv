@@ -10,26 +10,25 @@
 <style></style>
 
 <script>
-import jobs from './../data/jobs.yaml'
-
-import JobEntry from './JobEntry.vue'
+import JobEntry from '@hiring-manager/Job.vue'
 
 /**
  *
  * Component used to display the experience section
  *
  * Usage:
- *   <ExperienceComponent />
+ *   <ExperienceComponent :jobs="this.cv.projects" />
  *
  * @module ExperienceComponent
  *
  */
 export default {
-  name: 'ProjectsComponent',
-  data: function () {
-    return {
-      jobs,
-    };
+  name: 'JobsComponent',
+  props: {
+    jobs: {
+      type: Array,
+      required: true
+    }
   },
   components: {
     JobEntry,

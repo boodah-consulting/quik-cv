@@ -1,6 +1,6 @@
 <template>
   <div class="col-4">
-    <div>
+    <div id="projects" >
       <div class="text-h6 col row text-centre text-weight-bolder">
         Projects
       </div>
@@ -18,26 +18,25 @@
 <style></style>
 
 <script>
-import projects from './../data/projects.yaml'
-
-import ProjectEntry from './ProjectEntry.vue'
+import ProjectEntry from '@hiring-manager/Project.vue'
 
 /**
  *
  * Component used to display the projects section
  *
  * Usage:
- *   <ProjectsComponent />
+ *   <ProjectsComponent :projects="this.cv.projects" />
  *
  * @module ProjectsComponent
  *
  */
 export default {
   name: 'ProjectsComponent',
-  data: function () {
-    return {
-      projects
-    };
+  props: {
+    projects: {
+      type: Array,
+      required: true
+    }
   },
   components: {
     ProjectEntry,
