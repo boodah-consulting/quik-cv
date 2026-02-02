@@ -21,8 +21,6 @@
   </li>
 </template>
 
-<style></style>
-
 <script>
 import markdownit from 'markdown-it'
 
@@ -32,18 +30,6 @@ const md = markdownit({
   typographer: true
 })
 
-/**
- *
- * Component used to display a single project entry
- *
- * Usage:
- *   <ProjectEntry :project="project" />
- *
- * @param {Object} project - The project object to display
- *
- * @module ProjectEntry
- *
- */
 export default {
   name: 'ProjectEntry',
   props: {

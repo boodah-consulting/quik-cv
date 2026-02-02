@@ -24,9 +24,6 @@
   </section>
 </template>
 
-<style>
-</style>
-
 <script>
 import markdownit from 'markdown-it'
 const md = markdownit({
@@ -35,18 +32,6 @@ const md = markdownit({
   typographer: true
 })
 
-/**
- *
- * Component used to display a single job entry
- *
- * Usage:
- *   <JobEntry :job="job" />
- *
- * @param {Object} job - The job object to display
- *
- * @module JobEntry
- *
- */
 export default {
   name: 'JobEntry',
   props: {

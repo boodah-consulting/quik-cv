@@ -15,21 +15,9 @@
   </div>
 </template>
 
-<style></style>
-
 <script>
-import ProjectEntry from '@hiring-manager/Project.vue'
+import ProjectEntry from './ProjectEntry.vue'
 
-/**
- *
- * Component used to display the projects section
- *
- * Usage:
- *   <ProjectsComponent :projects="this.cv.projects" />
- *
- * @module ProjectsComponent
- *
- */
 export default {
   name: 'ProjectsComponent',
   props: {

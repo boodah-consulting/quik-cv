@@ -7,21 +7,9 @@
   </div>
 </template>
 
-<style></style>
-
 <script>
-import JobEntry from '@hiring-manager/Job.vue'
+import JobEntry from './JobEntry.vue'
 
-/**
- *
- * Component used to display the experience section
- *
- * Usage:
- *   <ExperienceComponent :jobs="this.cv.projects" />
- *
- * @module ExperienceComponent
- *
- */
 export default {
   name: 'JobsComponent',
   props: {

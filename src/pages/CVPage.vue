@@ -38,9 +38,9 @@ import { useRoute, useRouter } from 'vue-router'
 import MarkdownIt from 'markdown-it'
 import { useProfileService } from '@/composables/useProfileService'
 
-import JobsComponent from '@/components/Recruiter/Jobs.vue'
-import ProjectsComponent from '@/components/Recruiter/Projects.vue'
-import SkillsComponent from '@/components/Recruiter/Skills.vue'
+import JobsComponent from '@/components/Jobs.vue'
+import ProjectsComponent from '@/components/Projects.vue'
+import SkillsComponent from '@/components/Skills.vue'
 import HighlightsComponent from '@/components/Highlights.vue'
 import ContactInformation from '@/components/ContactInformation.vue'
 
