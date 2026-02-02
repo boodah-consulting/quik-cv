@@ -1,8 +1,8 @@
 <template>
-  <div class="q-my-md">
-    <div class="text-h6 col row text-weight-bolder q-mb-sm">Highlights</div>
-    <div class="highlights-container">
-      <div v-for="(highlight, index) in highlightsList" :key="index" class="highlight-chip q-my-xs q-mr-xs">
+  <div class="q-my-md text-center">
+    <div class="text-h6 row text-weight-bolder q-mb-sm text-center">Highlights</div>
+    <div class="highlights-container justify-center">
+      <div v-for="(highlight, index) in highlightsList" :key="index" class="highlight-chip q-my-xs q-mr-xs" :class="{ 'highlight-chip-first': index === 0 }">
         {{ highlight }}
       </div>
     </div>
@@ -14,6 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
   gap: 4px;
 }
 
@@ -26,6 +27,10 @@
   font-size: 0.85rem;
   line-height: 1.3;
   color: var(--q-dark);
+}
+
+.highlight-chip-first {
+  border-left: none !important;
 }
 </style>
 
