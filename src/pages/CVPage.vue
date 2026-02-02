@@ -4,8 +4,7 @@
     <div class="q-px-xs q-py-xs row flex" v-if="audienceData">
       <span id="caption" class="col-12 text-small text-center" v-html="summaryHtml">
       </span>
-      <span id="caption" class="col-12 text-small text-center" v-html="highlightsHtml" v-if="audienceData.highlights">
-      </span>
+      <HighlightsComponent :highlights="audienceData.highlights" v-if="audienceData.highlights" />
       <div class="row">
         <div class="col-8 left-hand-side">
           <JobsComponent :jobs="audienceData.jobs" />
@@ -42,6 +41,7 @@ import { useProfileService } from '@/composables/useProfileService'
 import JobsComponent from '@/components/Recruiter/Jobs.vue'
 import ProjectsComponent from '@/components/Recruiter/Projects.vue'
 import SkillsComponent from '@/components/Recruiter/Skills.vue'
+import HighlightsComponent from '@/components/Highlights.vue'
 import ContactInformation from '@/components/ContactInformation.vue'
 
 const md = new MarkdownIt({
@@ -69,12 +69,6 @@ export default {
       return audienceData.value ? md.render(audienceData.value.summary) : ''
     })
 
-    const highlightsHtml = computed(() => {
-      return audienceData.value && audienceData.value.highlights 
-        ? md.render(audienceData.value.highlights) 
-        : ''
-    })
-
     const changeProfile = () => {
       router.push({ name: 'ProfileSelection' })
     }
@@ -97,7 +91,6 @@ export default {
       loading,
       audienceData,
       summaryHtml,
-      highlightsHtml,
       changeProfile
     }
   },
@@ -105,6 +98,7 @@ export default {
     JobsComponent,
     ProjectsComponent,
     SkillsComponent,
+    HighlightsComponent,
     ContactInformation
   }
 }
