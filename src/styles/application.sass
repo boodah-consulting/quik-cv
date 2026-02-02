@@ -53,10 +53,24 @@ body
         color: #CCC
     #skills
       font-family: Georgia, "Times New Roman", Times, serif
-      display: inline-block
+      display: block
+      width: 100%
       .skill
         display: inline-block
         margin-right: 5px
+
+  #skills-list
+    list-style-type: none
+    padding: 0
+    margin: 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+  #skills-list .skill
+    flex: 1 1 auto
+    text-align: center
+    padding: 2px 4px
 
 // Print-specific enhancements (added for new CV components)
 @media print
@@ -98,15 +112,17 @@ body
     padding: 0
     margin: 0
 
-  #skills-list li.skill
-    display: inline !important
+  #skills-list .skill
+    display: inline-block !important
     padding: 2px 4px
     color: black !important
     font-family: Georgia, "Times New Roman", Times, serif
     font-size: 11pt
     margin-right: 8px
+    flex: 1 1 auto
+    text-align: center
 
-  #skills-list li.skill b
+  #skills-list .skill b
     color: #333
 
   .left-hand-side

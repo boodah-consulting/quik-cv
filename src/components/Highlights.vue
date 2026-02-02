@@ -21,12 +21,18 @@
 .highlight-chip {
   display: inline-block;
   padding: 4px 8px;
+  color: white !important;
   background-color: rgba(var(--q-primary-rgb), 0.1);
   border-left: 3px solid var(--q-primary);
   border-radius: 2px;
   font-size: 0.85rem;
   line-height: 1.3;
-  color: var(--q-dark);
+  color: black !important;
+}
+
+body.body--dark .highlight-chip {
+  background-color: rgba(var(--q-primary-rgb), 0.2);
+  color: white !important;
 }
 
 .highlight-chip-first {
@@ -35,7 +41,7 @@
 
 @media print {
   .body--dark .highlight-chip {
-    color: black !important;
+    color: white !important;
   }
 }
 </style>
@@ -54,14 +60,14 @@ export default {
       if (Array.isArray(this.highlights)) {
         return this.highlights
       }
-      
+
       if (typeof this.highlights === 'string') {
         return this.highlights
           .split('\n')
           .map(line => line.replace(/^-\s*/, '').trim())
           .filter(line => line.length > 0)
       }
-      
+
       return []
     }
   }

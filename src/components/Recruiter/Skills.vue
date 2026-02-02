@@ -1,15 +1,18 @@
 <template>
   <div id="skills">
     <div class="text-h6 col row text-weight-bolder">Skills</div>
-    <ul id="skills-list" class="flex row">
+    <div id="skills-list" class="flex row wrap justify-between">
       <SkillEntry v-for="skill in this.sortedSkills" :key="skill" :skill="skill" />
-    </ul>
+    </div>
   </div>
 </template>
 
 <style>
-ul#skills {
+#skills-list {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 </style>
 
