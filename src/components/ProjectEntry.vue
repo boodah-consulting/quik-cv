@@ -1,5 +1,5 @@
 <template>
-  <li class="project-description q-pa-sm">
+  <li class="project-description">
     <div class="q-mb-sm">
       <a target="_" v-bind:href="project.url">
         {{ project.name }}

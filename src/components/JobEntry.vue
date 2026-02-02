@@ -1,5 +1,5 @@
 <template>
-  <section class="experience row">
+  <section class="experience row q-mb-md">
     <div class="col-8">
       <span class="job-title">
         {{ job.company }}
@@ -23,6 +23,17 @@
     <span v-html="jobDescriptionHtml" class="col-12 job-description"> </span>
   </section>
 </template>
+
+<style scoped>
+.experience {
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+  page-break-after: avoid;
+  page-break-before: avoid;
+  widows: 2;
+  orphans: 2;
+}
+</style>
 
 <script>
 import markdownit from 'markdown-it'

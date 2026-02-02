@@ -1,16 +1,8 @@
 <template>
-  <div class="col-4">
-    <div id="projects" >
-      <div class="text-h6 col row text-centre text-weight-bolder">
-        Projects
-      </div>
-      <ul>
-        <ProjectEntry
-           v-for="project in projects"
-           :key="project.id"
-           :project="project"
-         />
-      </ul>
+  <div id="projects">
+    <div class="text-h6 col row text-weight-bolder">Projects</div>
+    <div id="projects-list" class="flex row wrap justify-between">
+      <ProjectEntry v-for="project in projects" :key="project.id" :project="project" />
     </div>
   </div>
 </template>
