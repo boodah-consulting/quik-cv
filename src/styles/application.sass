@@ -57,3 +57,40 @@ body
       .skill
         display: inline-block
         margin-right: 5px
+
+// Print-specific enhancements (added for new CV components)
+@media print
+  .q-page
+    padding: 0 !important
+    margin: 0 !important
+
+  .q-spinner,
+  .q-btn
+    display: none !important
+
+  .q-separator
+    display: none
+
+  .q-card
+    border: none !important
+    box-shadow: none !important
+
+  .left-hand-side,
+  .right-hand-side
+    page-break-inside: avoid
+    break-inside: avoid-page
+
+  .highlight-chip
+    border: 1px solid #ccc !important
+    background: white !important
+    -webkit-print-color-adjust: exact
+    print-color-adjust: exact
+
+  a[href^="http"]:after
+    content: " (" attr(href) ")"
+    font-size: 0.8em
+    color: #999
+
+  @page
+    margin: 1cm
+    size: A4
