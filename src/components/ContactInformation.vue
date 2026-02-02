@@ -19,22 +19,39 @@
 <style></style>
 
 <script>
-import contactDetails from './../data/contact_details.json'
+import contactDetails from './../data-old/contact_details.json'
 
-/**
- *
- * Component used to display contact information
- *
- * Usage:
- *   <ContactInformation />
- *
- * @module ContactInformation
- *
- */
 export default {
   name: 'ContactInformation',
+  props: {
+    data: {
+      type: Object,
+      required: false,
+      default: null
+    }
+  },
   data: function () {
     return { ...contactDetails };
   },
+  computed: {
+    firstName() {
+      return this.data?.first_name || contactDetails.first_name
+    },
+    lastName() {
+      return this.data?.last_name || contactDetails.last_name
+    },
+    email() {
+      return this.data?.email || contactDetails.email
+    },
+    phone() {
+      return this.data?.phone || contactDetails.phone
+    },
+    location() {
+      return this.data?.location || contactDetails.location
+    },
+    github() {
+      return this.data?.github || contactDetails.github
+    }
+  }
 }
 </script>

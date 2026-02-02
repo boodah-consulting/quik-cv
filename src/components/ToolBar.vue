@@ -9,27 +9,68 @@
       <q-space />
       <q-breadcrumbs active-color="white" style="font-size: 16px">
         <q-breadcrumbs-el icon="home" label="Home" :to="{ path: '/' }" />
-        <q-breadcrumbs-el :label="currentPage" v-if="isLandingPage === false" />
+        <q-breadcrumbs-el 
+          :label="currentPage" 
+          v-if="isLandingPage === false && currentPage" 
+        />
+        <q-breadcrumbs-el 
+          :label="currentProfile" 
+          v-if="currentProfile" 
+        />
       </q-breadcrumbs>
 
       <q-space />
 
       <q-btn-dropdown stretch flat icon="account_circle">
         <q-list>
-          <q-item-label header>Profiles</q-item-label>
+          <q-item-label header>Quick Actions</q-item-label>
           <q-item
-            v-for="item in items"
-            :key="item.path"
             clickable
             v-close-popup
-            @click="$router.push(item.path)"
+            @click="$router.push({ name: 'ProfileSelection' })"
             tabindex="0"
           >
             <q-item-section avatar>
-              <q-avatar icon="account_circle" color="primary" text-color="white" />
+              <q-avatar icon="folder" color="primary" text-color="white" />
             </q-item-section>
             <q-item-section>
-              <q-item-label>{{ item.title }}</q-item-label>
+              <q-item-label>Select Profile</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-item 
+            v-if="selectedProfile" 
+            clickable 
+            v-close-popup
+            @click="$router.push({ name: 'LandingPage' })"
+          >
+            <q-item-section avatar>
+              <q-avatar icon="home" color="secondary" text-color="white" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Home</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-separator v-if="profiles.length > 0" />
+
+          <q-item-label header v-if="profiles.length > 0">Available Profiles</q-item-label>
+          <q-item
+            v-for="profile in profiles"
+            :key="profile.name"
+            clickable
+            v-close-popup
+            @click="selectProfileAndNavigate(profile.name)"
+            tabindex="0"
+          >
+            <q-item-section avatar>
+              <q-avatar icon="person" color="accent" text-color="white" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>{{ formatProfileName(profile.name) }}</q-item-label>
+              <q-item-label caption>
+                {{ profile.audiences.length }} audience types
+              </q-item-label>
             </q-item-section>
           </q-item>
         </q-list>
@@ -62,16 +103,10 @@
 </style>
 
 <script>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import { useProfileService } from '@/composables/useProfileService'
 
-/**
- * Component used to display contact information and manage toolbar floating behavior
- *
- * Usage:
- *   <Toolbar :items="items" :current-page="currentPage" />
- *
- * @module ToolBar
- */
 export default {
   name: 'ToolBar',
   props: {
@@ -91,11 +126,36 @@ export default {
     }
   },
   setup() {
+    const router = useRouter()
+    const route = useRoute()
     const isScrolled = ref(false)
+    
+    const {
+      profiles,
+      selectedProfile,
+      selectProfile
+    } = useProfileService()
 
     const handleScroll = () => {
-      // Add floating effect when scrolled past 50 pixels
       isScrolled.value = window.scrollY > 50
+    }
+
+    const formatProfileName = (name) => {
+      return name.split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ')
+    }
+
+    const currentProfile = computed(() => {
+      if (route.params.profile) {
+        return formatProfileName(route.params.profile)
+      }
+      return null
+    })
+
+    const selectProfileAndNavigate = (profileName) => {
+      selectProfile(profileName)
+      router.push({ name: 'ProfileSelection' })
     }
 
     onMounted(() => {
@@ -107,7 +167,12 @@ export default {
     })
 
     return {
-      isScrolled
+      isScrolled,
+      profiles,
+      selectedProfile,
+      currentProfile,
+      formatProfileName,
+      selectProfileAndNavigate
     }
   }
 }

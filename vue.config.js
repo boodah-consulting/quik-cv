@@ -26,5 +26,8 @@ module.exports = defineConfig({
         "@technical-peer": require('path').resolve(__dirname, 'src/components/TechnicalPeer'),
       }
     }
+  },
+  devServer: {
+    historyApiFallback: true
   }
 })

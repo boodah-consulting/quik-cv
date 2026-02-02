@@ -1,16 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import recruiters from '@/data/recruiters.yaml'
-import hiringManager from '@/data/hiring-manager.yaml'
-import engineeringManager from '@/data/engineering-manager.yaml'
-import technicalPeer from '@/data/technical-peer.yaml'
-
 import LandingPagePage from "@/pages/LandingPage.vue"
-
-import RecruitersPage from '@/pages/RecruiterPage.vue'
-import HiringManagerPage from '@/pages/HiringManagerPage.vue'
-import EngineeringManagerPage from '@/pages/EngineeringManagerPage.vue'
-import TechnicalPeerPage from '@/pages/TechnicalPeerPage.vue'
+import ProfileSelectionPage from '@/pages/ProfileSelectionPage.vue'
+import CVPage from '@/pages/CVPage.vue'
 
 const routes = [
   {
@@ -22,48 +14,20 @@ const routes = [
     component: LandingPagePage,
   },
   {
-    path: '/recruiter',
-    name: 'Recruiter',
+    path: '/profiles',
+    name: 'ProfileSelection',
     meta: {
-      title: 'Recruiter',
+      title: 'Select Profile',
     },
-    component: RecruitersPage,
-    props: {
-      cv: recruiters
-    }
+    component: ProfileSelectionPage,
   },
   {
-    path: '/hiring-manager',
-    name: 'HiringManager',
+    path: '/cv/:profile/:audience',
+    name: 'CVPage',
     meta: {
-      title: 'Hiring Manager',
+      title: 'CV View',
     },
-    component: HiringManagerPage,
-    props: {
-      cv: hiringManager
-    }
-  },
-  {
-    path: '/engineering-manager',
-    name: 'EngineeringManager',
-    meta: {
-      title: 'Engineering Manager',
-    },
-    component: EngineeringManagerPage,
-    props: {
-      cv: engineeringManager
-    }
-  },
-  {
-    path: '/technical-peer',
-    name: 'TechnicalPeer',
-    meta: {
-      title: 'Technical Peer',
-    },
-    component: TechnicalPeerPage,
-    props: {
-      cv: technicalPeer
-    }
+    component: CVPage,
   },
 ]
 
