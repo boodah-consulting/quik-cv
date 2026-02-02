@@ -32,6 +32,10 @@
 .highlight-chip-first {
   border-left: none !important;
 }
+
+.body--dark .highlight-chip {
+  color: white !important;
+}
 </style>
 
 <script>
