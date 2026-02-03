@@ -9,6 +9,10 @@ body
     #projects
       font-family: Georgia, "Times New Roman", Times, serif
       text-align: center
+    .last-name
+      color: #CE4479
+    .first-name
+      color: #52A1CD
   #contact-details
     #phone,
     #secondphone,
@@ -70,6 +74,8 @@ body
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    .skill b
+      color: #52A1CD
 
   #skills-list .skill
     flex: 1 1 auto
@@ -100,18 +106,15 @@ body
 
   .highlight-chip,
   body.body--dark .highlight-chip
-    border: 1px solid #ccc !important
     background: white !important
     color: black !important
-    -webkit-print-color-adjust: exact
-    print-color-adjust: exact
 
   #skills
     width: 100% !important
     margin-top: 8px !important
     margin-bottom: 8px !important
-    page-break-after: always
-    break-after: page
+    page-break-after: auto
+    break-after: auto
 
   #skills-list
     list-style-type: none
@@ -140,6 +143,20 @@ body
     width: 33% !important
     float: right !important
     clear: none !important
+
+  // Prevent orphaned section headers - keep titles with their content
+  .text-h6
+    page-break-before: avoid
+    break-before: avoid
+    margin-top: 0
+
+  // Keep job and project entries attached to their headers
+  .job-entry,
+  .project-entry
+    page-break-before: avoid
+    break-before: avoid
+    page-break-inside: avoid
+    break-inside: avoid-page
 
   a[href^="http"]:after
     content: " (" attr(href) ")"
