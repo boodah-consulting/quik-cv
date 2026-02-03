@@ -7,14 +7,14 @@
       <div v-html="description"></div>
       <div v-if="key_achievements && key_achievements.length > 0">
         <span class="text-weight-bolder">Key Achievements:</span>
-        <ul v-for="item in key_achievements" :key="item">
-          <li>{{ item }}</li>
+        <ul>
+          <li v-for="item in key_achievements" :key="item">{{ item }}</li>
         </ul>
       </div>
       <div v-if="technologies && technologies.length > 0">
         <span class="text-weight-bolder">Technologies</span>
-        <ul v-for="item in technologies" :key="item">
-          <li>{{ item }}</li>
+        <ul>
+          <li v-for="item in technologies" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
