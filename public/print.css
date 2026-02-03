@@ -14,8 +14,4 @@
     widows: 2 !important;
     orphans: 2 !important;
   }
-
-  #projects-list {
-    display: block !important;
-  }
 }
