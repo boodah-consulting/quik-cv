@@ -24,17 +24,6 @@
   </section>
 </template>
 
-<style scoped>
-.experience {
-  page-break-inside: avoid;
-  break-inside: avoid-page;
-  page-break-after: avoid;
-  page-break-before: avoid;
-  widows: 2;
-  orphans: 2;
-}
-</style>
-
 <script>
 import markdownit from 'markdown-it'
 const md = markdownit({
