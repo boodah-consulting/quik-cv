@@ -4,7 +4,7 @@ const path = require('path')
 const VAULT_PATH = '/home/baphled/vaults/baphled/assets/quik-cv'
 const PUBLIC_PROFILES_PATH = path.join(__dirname, '../public/profiles')
 
-const audienceTypes = ['recruiter', 'hiring-manager', 'engineering-manager', 'technical-peer']
+const audienceTypes = ['master', 'recruiter', 'hiring-manager', 'engineering-manager', 'technical-peer']
 
 async function syncProfiles() {
   console.log('Syncing profiles from vault...')
