@@ -1,5 +1,5 @@
 <template>
-  <div class="highlight-chip q-my-xs q-mr-xs">
+  <div class="highlight-chip q-mr-xs">
     {{ highlight }}
   </div>
 </template>
@@ -7,7 +7,7 @@
 <style>
 .highlight-chip {
   display: inline-block;
-  padding: 4px 8px;
+  padding: 2px 4px;
   color: white !important;
   font-size: 0.85rem;
   line-height: 1.3;

@@ -1,6 +1,6 @@
 <template>
   <div id="skills">
-    <div class="text-h6 col row text-weight-bolder">Skills</div>
+    <div class="text-h6 row text-weight-bolder">Skills</div>
     <div id="skills-list" class="flex row wrap justify-between">
       <SkillEntry v-for="skill in this.sortedSkills" :key="skill.type" :skill="skill" />
     </div>

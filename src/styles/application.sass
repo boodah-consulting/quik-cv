@@ -19,7 +19,10 @@ body
     #email
       font-family: Georgia, "Times New Roman", Times, serif
       text-align: center
-      color: #52A1CD
+      color: #CE4479
+      a
+        color: #52A1CD
+        text-decoration: none
   #github,
   #location
     font-family: Georgia, "Times New Roman", Times, serif
@@ -30,12 +33,7 @@ body
   section
     #projects,
     .experience
-      page-break-inside: avoid
-      break-inside: avoid-page
-      page-break-after: avoid
-      page-break-before: avoid
-      widows: 2
-      orphans: 2
+      margin-bottom: 0.5rem
     .job-title,
     .job-position
       font-family: Georgia, "Times New Roman", Times, serif
@@ -99,11 +97,6 @@ body
     border: none !important
     box-shadow: none !important
 
-  .left-hand-side,
-  .right-hand-side
-    page-break-inside: avoid
-    break-inside: avoid-page
-
   .highlight-chip,
   body.body--dark .highlight-chip
     background: white !important
@@ -111,10 +104,8 @@ body
 
   #skills
     width: 100% !important
-    margin-top: 8px !important
-    margin-bottom: 8px !important
-    page-break-after: auto
-    break-after: auto
+    margin-top: 0.5rem !important
+    margin-bottom: 0.5rem !important
 
   #skills-list
     list-style-type: none
@@ -138,25 +129,24 @@ body
     width: 65% !important
     float: left !important
     clear: none !important
+    page-break-before: always
+    break-before: page
 
   .right-hand-side
     width: 33% !important
     float: right !important
     clear: none !important
 
-  // Prevent orphaned section headers - keep titles with their content
+  // Consistent section spacing - no forced page breaks
   .text-h6
-    page-break-before: avoid
-    break-before: avoid
-    margin-top: 0
+    margin-top: 0.5rem
+    margin-bottom: 0.3rem
 
-  // Keep job and project entries attached to their headers
-  .job-entry,
-  .project-entry
-    page-break-before: avoid
-    break-before: avoid
-    page-break-inside: avoid
-    break-inside: avoid-page
+  // Ensure sections flow naturally without forced breaks
+  section, .section
+    margin-bottom: 0.5rem
+    page-break-inside: auto
+    break-inside: auto
 
   a[href^="http"]:after
     content: " (" attr(href) ")"

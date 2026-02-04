@@ -1,5 +1,5 @@
 <template>
-  <div class="skill q-px-sm"><b>{{ type }}</b>: {{ list }}</div>
+  <div class="skill"><b>{{ type }}</b>: {{ list }}</div>
 </template>
 
 <script>
