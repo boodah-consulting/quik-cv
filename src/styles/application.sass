@@ -80,6 +80,14 @@ body
     text-align: center
     padding: 2px 4px
 
+  // Separator between Experience and Projects
+  .left-hand-side
+    border-right: 1px solid #ccc
+    padding-right: 0.5rem
+
+  .right-hand-side
+    padding-left: 0.5rem
+
 // Print-specific enhancements (added for new CV components)
 @media print
   .q-page
@@ -131,11 +139,14 @@ body
     clear: none !important
     page-break-before: always
     break-before: page
+    border-right: 1px solid #ccc
+    padding-right: 0.5rem
 
   .right-hand-side
     width: 33% !important
     float: right !important
     clear: none !important
+    padding-left: 0.5rem
 
   // Consistent section spacing - no forced page breaks
   .text-h6

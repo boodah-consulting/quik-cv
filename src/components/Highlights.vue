@@ -1,5 +1,5 @@
 <template>
-  <div class="q-my-md text-center">
+  <div class="text-center">
     <div class="text-h6 row text-weight-bolder q-mb-sm text-center">Highlights</div>
     <div class="highlights-container justify-center">
       <HighlightEntry v-for="(highlight, index) in highlightsList" :key="index" :highlight="highlight" :is-first="index === 0" />

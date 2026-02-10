@@ -1,5 +1,5 @@
 <template>
-  <div class="col-6">
+  <div class="experience-section">
     <div class="text-h6 col row text-weight-bolder">Experience</div>
     <div class="q-px-xs q-mx-md">
       <JobEntry v-for="job in jobs" :key="job.id" :job="job" />
