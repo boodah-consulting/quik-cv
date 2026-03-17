@@ -1,7 +1,7 @@
 <template>
   <li class="project-description">
     <div class="q-mb-sm">
-      <a target="_" v-bind:href="project.url">
+      <a target="_blank" rel="noopener noreferrer" v-bind:href="project.url">
         {{ project.name }}
       </a>
       <div v-html="description"></div>
@@ -25,7 +25,7 @@
 import markdownit from 'markdown-it'
 
 const md = markdownit({
-  html: true,
+  html: false,
   linkify: true,
   typographer: true
 })

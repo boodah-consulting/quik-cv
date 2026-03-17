@@ -8,7 +8,6 @@
 .highlight-chip {
   display: inline-block;
   padding: 2px 4px;
-  color: white !important;
   font-size: 0.85rem;
   line-height: 1.3;
   color: black !important;

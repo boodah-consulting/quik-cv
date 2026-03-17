@@ -14,13 +14,13 @@
   </div>
   <span class="row justify-center" id="location">{{ location }}</span>
   <div class="row justify-center social-links">
-    <a :href="linkedin" target="_blank" class="social-link" title="LinkedIn">
+    <a :href="linkedin" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
       <q-icon :name="linkedinIcon" class="social-icon" size="24px" />
     </a>
-    <a :href="github" target="_blank" class="social-link" title="GitHub">
+    <a :href="github" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
       <q-icon :name="githubIcon" class="social-icon" size="24px" />
     </a>
-    <a :href="portfolio" target="_blank" class="social-link" title="Portfolio">
+    <a :href="portfolio" target="_blank" rel="noopener noreferrer" class="social-link" title="Portfolio">
       <q-icon :name="globeIcon" class="social-icon" size="24px" />
     </a>
   </div>
@@ -98,10 +98,10 @@ export default {
   },
   computed: {
     firstName() {
-      return this.data?.first_name || contactDetails.first_name
+      return this.data?.firstName || this.data?.first_name || contactDetails.firstName
     },
     lastName() {
-      return this.data?.last_name || contactDetails.last_name
+      return this.data?.lastName || this.data?.last_name || contactDetails.lastName
     },
     email() {
       return this.data?.email || contactDetails.email

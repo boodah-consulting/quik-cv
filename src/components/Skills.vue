@@ -2,7 +2,7 @@
   <div id="skills">
     <div class="text-h6 row text-weight-bolder">Skills</div>
     <div id="skills-list" class="flex row wrap justify-between">
-      <SkillEntry v-for="skill in this.sortedSkills" :key="skill.type" :skill="skill" />
+      <SkillEntry v-for="skill in sortedSkills" :key="skill.type" :skill="skill" />
     </div>
   </div>
 </template>

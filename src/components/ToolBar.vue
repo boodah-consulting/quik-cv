@@ -90,17 +90,7 @@ import { useProfileService } from '@/composables/useProfileService'
 
 export default {
   name: 'ToolBar',
-  props: {
-    currentPage: {
-      type: String,
-      required: false,
-    },
-    isLandingPage: {
-      type: Boolean,
-      required: false,
-      default: false
-    }
-  },
+  props: {},
   setup() {
     const router = useRouter()
     const route = useRoute()

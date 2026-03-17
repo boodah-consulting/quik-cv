@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const VAULT_PATH = '/home/baphled/vaults/baphled/assets/quik-cv'
+const VAULT_PATH = process.env.VAULT_PATH || '/home/baphled/vaults/baphled/assets/quik-cv'
 const PUBLIC_PROFILES_PATH = path.join(__dirname, '../public/profiles')
 
 const audienceTypes = ['master', 'recruiter', 'hiring-manager', 'engineering-manager', 'technical-peer']

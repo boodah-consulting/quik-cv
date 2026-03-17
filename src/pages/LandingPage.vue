@@ -95,6 +95,7 @@ export default {
     }
 
     const handleAudienceSelect = async (profileName, audienceType) => {
+      selectProfile(profileName)
       await selectAudience(audienceType)
       router.push({
         name: 'CVPage',

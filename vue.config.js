@@ -19,11 +19,7 @@ module.exports = defineConfig({
   configureWebpack: {
     resolve: {
       alias: {
-        '@': require('path').resolve(__dirname, '/src'),
-        "@recruiter": require('path').resolve(__dirname, 'src/components/Recruiter'),
-        "@hiring-manager": require('path').resolve(__dirname, 'src/components/HiringManager'),
-        "@engineering-manager": require('path').resolve(__dirname, 'src/components/EngineeringManager'),
-        "@technical-peer": require('path').resolve(__dirname, 'src/components/TechnicalPeer'),
+        '@': require('path').resolve(__dirname, 'src'),
       }
     }
   },

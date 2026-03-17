@@ -28,7 +28,5 @@
     "src/**/*.vue",
     "tests/**/*.spec.js",
     "tests/**/*.vue"
-  ],
-  "paths": {
-  }
+  ]
 }

@@ -45,7 +45,7 @@ import HighlightsComponent from '@/components/Highlights.vue'
 import ContactInformation from '@/components/ContactInformation.vue'
 
 const md = new MarkdownIt({
-  html: true,
+  html: false,
   linkify: true,
   typographer: true
 })
@@ -70,7 +70,7 @@ export default {
     })
 
     const changeProfile = () => {
-      router.push({ name: 'ProfileSelection' })
+      router.push({ name: 'LandingPage' })
     }
 
     const loadData = async () => {

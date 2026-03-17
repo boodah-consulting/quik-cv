@@ -13,7 +13,7 @@
 import fs from 'fs'
 import path from 'path'
 import yaml from 'js-yaml'
-import { execSync } from 'child_process'
+
 
 const PROJECT_ROOT = process.cwd()
 const PUBLIC_PROFILES_PATH = path.join(PROJECT_ROOT, 'public/profiles')
@@ -128,7 +128,6 @@ function verifyRouting() {
   
   const requiredRoutes = [
     { name: 'LandingPage', path: '/' },
-    { name: 'ProfileSelection', path: '/profiles' },
     { name: 'CVPage', path: '/cv/:profile/:audience' }
   ]
   
@@ -151,7 +150,7 @@ function verifyComponents() {
   log('Verifying component structure...', 'info')
   
   const requiredComponents = [
-    'src/pages/ProfileSelectionPage.vue',
+    'src/pages/LandingPage.vue',
     'src/pages/CVPage.vue',
     'src/composables/useProfileService.js'
   ]
