@@ -71,7 +71,6 @@ body
       color: #52A1CD
 
   #skills-list .skill
-    flex: 1 1 auto
     text-align: center
     padding: 2px 4px
 
@@ -82,3 +81,90 @@ body
 
   .right-hand-side
     padding-left: 0.5rem
+
+@page
+  margin: 1cm
+  size: A4
+
+@media print
+  #toolbar
+    display: none
+
+  // Print-specific enhancements (added for new CV components)
+  .q-page
+    padding: 0 !important
+    margin: 0 !important
+
+  .q-spinner,
+  .q-btn
+    display: none !important
+
+  .q-separator
+    display: none
+
+  .q-card
+    border: none !important
+    box-shadow: none !important
+
+  .highlight-chip,
+  body.body--dark .highlight-chip
+    background: white !important
+    color: black !important
+
+  #skills
+    width: 100% !important
+    margin-top: 0.5rem !important
+    margin-bottom: 0.5rem !important
+
+  #skills-list
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+  #skills-list .skill
+    display: inline-block !important
+    padding: 2px 4px
+    color: black !important
+    font-family: Georgia, "Times New Roman", Times, serif
+    font-size: 11pt
+    margin-right: 8px
+    text-align: center
+
+  #skills-list .skill b
+    color: #333
+
+  .experience-projects-row
+    break-before: page
+    page-break-before: always
+
+  .left-hand-side
+    width: 65% !important
+    float: left !important
+    clear: none !important
+    box-sizing: border-box !important
+    border-right: 1px solid #ccc
+    padding-right: 0.5rem
+
+  .right-hand-side
+    width: 33% !important
+    float: right !important
+    clear: none !important
+    box-sizing: border-box !important
+    padding-left: 0.5rem
+
+  // Consistent section spacing
+  .text-h6
+    margin-top: 0.5rem
+    margin-bottom: 0.3rem
+
+  // Ensure sections flow naturally within pages
+  section, .section
+    margin-bottom: 0.5rem
+    page-break-inside: auto
+    break-inside: auto
+
+  a[href^="http"]:after
+    content: " (" attr(href) ")"
+    font-size: 0.8em
+    color: #999
+
