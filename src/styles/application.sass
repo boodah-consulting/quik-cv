@@ -1,19 +1,34 @@
 body
-  font-family: "Myriad Pro", Tahoma
   #wrapper
     #name,
-    #projects,
-    #contact-details
+    #projects
       font-family: Georgia, "Times New Roman", Times, serif
       text-align: center
-    #contact-details
-      #phone,
-      #secondphone,
-      #email
+    .last-name
+      color: #CE4479
+    .first-name
+      color: #52A1CD
+  #contact-details
+    #phone,
+    #secondphone,
+    #email
+      font-family: Georgia, "Times New Roman", Times, serif
+      text-align: center
+      color: #CE4479
+      a
         color: #52A1CD
+        text-decoration: none
+  #github,
+  #location
+    font-family: Georgia, "Times New Roman", Times, serif
+    text-align: center
+    color: #52A1CD
   #caption
     color: #666
   section
+    #projects,
+    .experience
+      margin-bottom: 0.5rem
     .job-title,
     .job-position
       font-family: Georgia, "Times New Roman", Times, serif
@@ -36,12 +51,34 @@ body
     .job-start-date
       display: inline-block
       span
-        margin-left: 7px
-        margin-right: 7px
         color: #CCC
     #skills
       font-family: Georgia, "Times New Roman", Times, serif
-      display: inline-block
+      display: block
+      width: 100%
       .skill
         display: inline-block
         margin-right: 5px
+
+  #skills-list
+    list-style-type: none
+    padding: 0
+    margin: 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .skill b
+      color: #52A1CD
+
+  #skills-list .skill
+    flex: 1 1 auto
+    text-align: center
+    padding: 2px 4px
+
+  // Separator between Experience and Projects
+  .left-hand-side
+    border-right: 1px solid #ccc
+    padding-right: 0.5rem
+
+  .right-hand-side
+    padding-left: 0.5rem

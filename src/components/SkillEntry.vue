@@ -1,24 +1,25 @@
 <template>
-  <li class="skill q-px-sm">{{ skill }}</li>
+  <div class="skill"><b>{{ type }}</b>: {{ list }}</div>
 </template>
 
-<style></style>
-
 <script>
-/**
- *
- * Component used to display a single skill
- *
- * Usage:
- *   <SkillEntry />
- *
- * @module SkillEntry
- *
- */
 export default {
   name: 'SkillEntry',
   props: {
-    skill: String,
+    skill: {
+      required: true
+    },
   },
+  computed: {
+    type() {
+      return this.skill.type
+    },
+    list() {
+      if (!this.skill.skills) {
+        return ''
+      }
+      return this.skill.skills.join(', ')
+    }
+  }
 }
 </script>

@@ -1,0 +1,177 @@
+---
+first_name: Yomi
+last_name: Colledge
+email: yomi@boodah.net
+location: Remote (UK)
+phone: +44 7894 987 855
+links:
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/yomicolledge
+  - label: GitHub
+    url: http://github.com/baphled
+  - label: Portfolio
+    url: http://boodah.net
+
+summary: |
+  **Senior Ruby Engineer / Principal Engineer / Technical Lead**
+
+  Delivery-focused engineer specialising in Ruby-based platforms, migrations, and systems modernisation. Consistently trusted to take ownership of complex, high-risk initiatives and deliver measurable operational and commercial impact.
+
+highlights: |
+  Operates effectively at the intersection of hands-on engineering, system design, and delivery leadership, with a strong bias toward pragmatic execution and risk reduction.
+
+jobs:
+  - company: "FullSpektrum®"
+    position: "Principal Technical Consultant"
+    start_date: "Jul 2024"
+    end_date: "Nov 2025"
+    description: |
+      - Took end-to-end ownership of technical strategy and delivery for an early-stage startup, ensuring execution aligned tightly with business goals
+      - Defined technology selection and system architecture to clearly demonstrate the company’s core product differentiators
+      - Designed and delivered an MVP development and demonstration strategy to accelerate validation and time-to-market
+      - Prepared detailed technical due-diligence materials to support investor confidence and decision-making
+      - Established and executed a beta delivery strategy to optimise feedback loops and iterative product improvement
+
+  - company: "Mindful Chef"
+    position: "Senior Ruby Developer"
+    start_date: "Mar 2022"
+    end_date: "Apr 2024"
+    description: |
+      - Owned and delivered a major platform migration to Ruby 3.1, reducing server load and improving overall system performance and stability
+      - Designed and implemented a new delivery flow that increased weekly delivery volume by **30%** while maintaining operational reliability
+      - Re-architected complex Kafka-based data pipelines, resulting in:
+        - **45% reduction in delivery-box debt collection**
+        - Elimination of recurring payment failures
+        - Significant reduction in data integrity and loss risks
+      - Automated critical operational workflows, generating **£132,000 in annual cost savings**
+      - Delivered production features across ordering, subscriptions, logistics, and CMS, working closely with product and operations teams
+
+  - company: "Spice Rack"
+    position: "Ruby DevOps Consultant"
+    start_date: "Jan 2022"
+    end_date: "Mar 2022"
+    description: |
+      - Designed and delivered AWS-backed provisioning and content delivery services using Ruby and Docker under aggressive timelines
+      - Compressed a planned six-month delivery into three months without compromising production quality
+      - Implemented resilient backup and rollback mechanisms, reducing infrastructure setup time by **80%**
+      - Delivered production-ready infrastructure with minimal operational overhead for the client
+      - Enabled clean handover to internal teams for ongoing ownership and maintenance
+      - Ensured system availability and scalability in anticipation of significant traffic growth
+
+  - company: "Freelance Technical Consultant"
+    position: "Senior Ruby Developer & Architect"
+    start_date: "Oct 2020"
+    end_date: "Dec 2021"
+    description: |
+      - Architected scalable white-label SaaS platforms and high-performance APIs for multiple clients
+      - Implemented ELK-based observability for real-time monitoring of multi-million–event data streams
+      - Delivered specialised systems including pension calculation engines and complex publishing workflows
+      - Designed REST APIs that improved onboarding flows and reduced customer churn through clearer integration contracts
+
+  - company: "NTTData / BEIS / Defra / MAS"
+    position: "Senior Ruby Development Consultant"
+    start_date: "Jun 2019"
+    end_date: "Oct 2020"
+    description: |
+      - Led migration and stabilisation of critical government platforms, ensuring reliability, accessibility, and regulatory compliance
+      - Standardised Ruby development practices across multiple delivery teams to improve consistency and maintainability
+      - Integrated complex REST and SOAP APIs to support secure inter-agency data exchange
+      - Stabilised large-scale public-sector services operating under sustained high-traffic conditions
+      - Embedded rapidly within cross-functional teams to deliver high-priority digital services
+      - Introduced the defra-ruby-style guide (https://github.com/DEFRA/defra-ruby-style), improving code quality across teams
+      - Implemented and extended the Dough open-source framework (https://github.com/moneyadviceservice/dough)
+      - Delivered and deployed a production pensions calculator tool
+      - Maintained and evolved an internal CMS, consistently delivering changes ahead of schedule
+
+  - company: "Diverse Technical Consulting Portfolio"
+    position: "Senior Ruby Developer & Technical Architect"
+    start_date: "Jun 2012"
+    end_date: "Aug 2018"
+    description: |
+      - Designed and implemented ELK stack solutions to provide operational insight and data-driven decision support
+      - Architected flexible white-label platforms and high-performance APIs across multiple domains
+      - Delivered complex system migrations, third-party integrations, and infrastructure scaling initiatives
+      - Adapted rapidly to new industries, problem spaces, and technical constraints
+      - Contributed to HSBC Global Connections initiatives and enhancements to the Atlas project
+
+projects:
+  - name: "n-vyro.io"
+    description: |
+      Took ownership of the technical design and delivery of a full IoT ecosystem, spanning hardware and software.
+      Designed scalable systems and CI/CD pipelines across 14+ repositories to ensure reliable, repeatable delivery.
+      Demonstrated the ability to manage complex, multi-domain systems from prototype through to production.
+    url: "https://n-vyro.io"
+    key_achievements:
+      - Owned delivery across 14+ interconnected repositories
+      - Implemented end-to-end CI/CD pipelines
+      - Bridged hardware and software domains within a single delivery stream
+
+  - name: "QuikCV"
+    description: |
+      Designed and delivered an open-source CV generation platform as a demonstration of clean architecture
+      and pragmatic system design. Led migration from Ruby to Vue.js to improve flexibility and maintainability.
+      Serves as a living example of tooling, architecture, and long-term maintainability.
+    url: "https://github.com/boodah-consulting/quik-cv"
+    key_achievements:
+      - Led a full technology stack migration
+      - Maintained an active open-source codebase
+      - Demonstrated CLI tooling and architectural discipline
+
+skills:
+  Languages:
+    - Ruby
+    - Erlang
+    - Go
+    - Rust
+    - Python
+    - PHP
+    - C/C++
+    - JavaScript / ECMAScript
+    - TypeScript
+    - HTML
+    - Zsh
+
+  Frameworks:
+    - Ruby on Rails
+    - Sinatra
+    - Grape
+    - React
+    - Vue.js
+    - Quasar Framework
+
+  "Data & Messaging":
+    - PostgreSQL
+    - Redis
+    - Kafka
+    - ELK Stack
+    - GraphQL
+    - MongoDB
+    - Elasticsearch
+
+  "Cloud & DevOps":
+    - AWS (EC2, S3, RDS, CloudFront)
+    - Docker
+    - CI/CD (Jenkins, Travis CI)
+    - Semantic Versioning
+    - Capistrano
+    - Chef
+    - Ansible
+    - Logstash / Kibana
+    - StatsD / Graphite
+
+  "Engineering Practices":
+    - Agile / Scrum / Kanban
+    - TDD / BDD
+    - API Design
+    - Object-Oriented Programming
+    - Component Driven Development
+    - Pair Programming
+    - Technical Mentoring
+    - Strategic Consulting
+    - Observability & Performance Optimisation
+    - Platform Modernisation
+    - Rescue Missions
+    - Cost Reduction Strategies
+    - Release Management
+    - Infrastructure as Code
+    - Cross-functional Collaboration

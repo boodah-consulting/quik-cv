@@ -15,5 +15,15 @@ module.exports = defineConfig({
       importStrategy: 'kebab',
       rtlSupport: false
     }
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': require('path').resolve(__dirname, 'src'),
+      }
+    }
+  },
+  devServer: {
+    historyApiFallback: true
   }
 })
