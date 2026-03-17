@@ -4,6 +4,7 @@
     <div class="q-px-xs q-py-xs row flex" v-if="audienceData">
       <span id="caption" class="col-12 text-small text-center" v-html="summaryHtml">
       </span>
+      <HighlightsComponent :highlights="audienceData.highlights" v-if="audienceData.highlights" />
       <SkillsComponent :skills="audienceData.skills" />
       <div class="row">
         <div class="col-8 left-hand-side">
@@ -40,6 +41,7 @@ import { useProfileService } from '@/composables/useProfileService'
 import JobsComponent from '@/components/Jobs.vue'
 import ProjectsComponent from '@/components/Projects.vue'
 import SkillsComponent from '@/components/Skills.vue'
+import HighlightsComponent from '@/components/Highlights.vue'
 import ContactInformation from '@/components/ContactInformation.vue'
 
 const md = new MarkdownIt({
@@ -96,6 +98,7 @@ export default {
     JobsComponent,
     ProjectsComponent,
     SkillsComponent,
+    HighlightsComponent,
     ContactInformation
   }
 }
