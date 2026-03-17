@@ -83,12 +83,15 @@ body
   .right-hand-side
     padding-left: 0.5rem
 
+@page
+  margin: 1cm
+  size: A4
+
 @media print
   #toolbar
     display: none
 
-// Print-specific enhancements (added for new CV components)
-@media print
+  // Print-specific enhancements (added for new CV components)
   .q-page
     padding: 0 !important
     margin: 0 !important
@@ -126,7 +129,6 @@ body
     font-family: Georgia, "Times New Roman", Times, serif
     font-size: 11pt
     margin-right: 8px
-    flex: 1 1 auto
     text-align: center
 
   #skills-list .skill b
@@ -140,7 +142,7 @@ body
     width: 65% !important
     float: left !important
     clear: none !important
-
+    box-sizing: border-box !important
     border-right: 1px solid #ccc
     padding-right: 0.5rem
 
@@ -148,6 +150,7 @@ body
     width: 33% !important
     float: right !important
     clear: none !important
+    box-sizing: border-box !important
     padding-left: 0.5rem
 
   // Consistent section spacing
@@ -166,6 +169,3 @@ body
     font-size: 0.8em
     color: #999
 
-  @page
-    margin: 1cm
-    size: A4
