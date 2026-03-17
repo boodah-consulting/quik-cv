@@ -1,0 +1,124 @@
+---
+first_name: Yomi
+last_name: Colledge
+email: yomi@boodah.net
+location: Remote (UK)
+phone: +44 7894 987 855
+links:
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/yomicolledge
+  - label: GitHub
+    url: http://github.com/baphled
+  - label: Portfolio
+    url: http://boodah.net
+
+summary: |
+  **Senior Engineering Leader / Principal Engineer / Technical Lead**
+
+  Delivery-focused engineering leader with deep experience in Ruby-based platforms and systems modernisation. Proven ability to align technical strategy with business objectives, deliver high-impact initiatives, and scale engineering teams and processes for operational excellence.
+
+highlights: |
+  Operates at the intersection of technical execution, architecture, and strategic leadership. Adept at building resilient teams, reducing delivery risk, and driving operational and commercial outcomes at scale.
+
+jobs:
+  - company: "FullSpektrum®"
+    position: "Principal Technical Consultant"
+    start_date: "Jul 2024"
+    end_date: "Nov 2025"
+    description: |
+      - Directed end-to-end technical strategy and delivery for an early-stage startup, aligning engineering execution with core business goals
+      - Defined system architecture and technology stack to clearly articulate product differentiation to investors and stakeholders
+      - Established MVP and beta delivery strategies that accelerated validation and market readiness
+      - Delivered high-confidence investor due diligence materials, enabling funding decisions
+      - Mentored engineering contributors, fostering a culture of accountability and operational excellence
+
+  - company: "Mindful Chef"
+    position: "Senior Ruby Developer"
+    start_date: "Mar 2022"
+    end_date: "Apr 2024"
+    description: |
+      - Led a major platform migration, improving system performance, reliability, and scalability
+      - Implemented operational workflows and delivery pipelines that increased weekly delivery capacity by **30%**
+      - Re-architected data pipelines, eliminating recurring payment failures and reducing operational debt by **45%**
+      - Automated critical processes, generating **£132,000 in annual cost savings**
+      - Partnered with cross-functional teams to deliver high-impact product initiatives across subscriptions, logistics, and CMS
+
+  - company: "Spice Rack"
+    position: "Ruby DevOps Consultant"
+    start_date: "Jan 2022"
+    end_date: "Mar 2022"
+    description: |
+      - Directed rapid delivery of AWS-backed provisioning and content delivery services, reducing projected timelines by 50%
+      - Established resilient infrastructure with minimal operational overhead, enabling future team ownership
+      - Defined clear handover processes and documentation to support long-term system maintainability
+
+  - company: "Freelance Technical Consultant"
+    position: "Senior Ruby Developer & Architect"
+    start_date: "Oct 2020"
+    end_date: "Dec 2021"
+    description: |
+      - Architected and delivered scalable SaaS platforms and high-performance APIs for multiple clients
+      - Provided technical leadership across observability, data systems, and integration projects
+      - Mentored client teams on best practices, improving maintainability and onboarding efficiency
+
+  - company: "NTTData / BEIS / Defra / MAS"
+    position: "Senior Ruby Development Consultant"
+    start_date: "Jun 2019"
+    end_date: "Oct 2020"
+    description: |
+      - Led migration and stabilisation of critical government platforms under high-traffic conditions
+      - Standardised engineering practices across multiple teams, improving code quality and delivery consistency
+      - Embedded quickly into cross-functional teams to deliver priority digital services ahead of schedule
+      - Introduced open-source frameworks and style guides to enhance maintainability and team alignment
+
+  - company: "Diverse Technical Consulting Portfolio"
+    position: "Senior Ruby Developer & Technical Architect"
+    start_date: "Jun 2012"
+    end_date: "Aug 2018"
+    description: |
+      - Delivered system architecture, integration, and migration initiatives across multiple industries
+      - Mentored engineering teams and contributed to strategic initiatives for long-term operational efficiency
+      - Provided technical direction to enable scalable, maintainable, and high-performance platforms
+
+projects:
+  - name: "n-vyro.io"
+    description: |
+      Led the end-to-end delivery of a complex IoT ecosystem, spanning hardware and software. Ensured scalable, maintainable systems and CI/CD pipelines across 14+ repositories.
+    url: "https://n-vyro.io"
+    key_achievements:
+      - Directed delivery across multi-domain systems from prototype to production
+      - Implemented reliable, repeatable CI/CD pipelines
+
+  - name: "QuikCV"
+    description: |
+      Delivered an open-source CV generation platform demonstrating clean architecture and maintainable system design. Led technology stack migration to Vue.js for enhanced flexibility.
+    url: "https://github.com/boodah-consulting/quik-cv"
+    key_achievements:
+      - Directed full technology stack migration
+      - Demonstrated leadership in open-source maintainability and tooling
+
+skills:
+  Leadership & Delivery:
+    - Technical Strategy
+    - Engineering Team Leadership
+    - Cross-Functional Collaboration
+    - Mentoring & Coaching
+    - Delivery & Project Management
+    - Risk Reduction & Operational Resilience
+    - Process Improvement & Cost Optimisation
+
+  Technical & Architecture:
+    - Ruby / Ruby on Rails / Sinatra / Grape
+    - System Architecture & Platform Modernisation
+    - API Design & Integration
+    - Observability & Performance Optimisation
+    - SaaS & Multi-Tenant Platforms
+
+  Data & Messaging:
+    - PostgreSQL / MySQL / Redis / Kafka
+    - ELK Stack / GraphQL / MongoDB / Elasticsearch
+
+  Cloud & DevOps:
+    - AWS (EC2, S3, RDS, CloudFront)
+    - Docker / CI/CD (Jenkins, Travis CI)
+    - Infrastructure as Code (Chef, Ansible, Vagrant, Capistrano)

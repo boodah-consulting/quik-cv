@@ -1,5 +1,5 @@
 <template>
-  <section class="experience row">
+  <section class="experience row q-mb-md">
     <div class="col-8">
       <span class="job-title">
         {{ job.company }}
@@ -11,7 +11,7 @@
         {{ job.position }}
       </span>
     </div>
-    <div class="col-4 job-dates text-subtitle2 text-right">
+    <div class="col job-dates text-subtitle2 text-right">
       <span class="job-start-date">
         {{ job.start_date }}
       </span>
@@ -24,9 +24,6 @@
   </section>
 </template>
 
-<style>
-</style>
-
 <script>
 import markdownit from 'markdown-it'
 const md = markdownit({
@@ -35,18 +32,6 @@ const md = markdownit({
   typographer: true
 })
 
-/**
- *
- * Component used to display a single job entry
- *
- * Usage:
- *   <JobEntry :job="job" />
- *
- * @param {Object} job - The job object to display
- *
- * @module JobEntry
- *
- */
 export default {
   name: 'JobEntry',
   props: {

@@ -17,5 +17,16 @@
       "dom.iterable",
       "scripthost"
     ]
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "public",
+    "dist"
+  ],
+  "include": [
+    "src/**/*.js",
+    "src/**/*.vue",
+    "tests/**/*.spec.js",
+    "tests/**/*.vue"
+  ]
 }

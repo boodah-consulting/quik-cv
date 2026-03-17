@@ -1,24 +1,21 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <ContactInformation />
-
+    <ToolBar />
     <q-page-container>
-      <OnePager />
+      <router-view v-slot="{ Component }">
+        <component :is="Component" />
+      </router-view>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import ContactInformation from './components/ContactInformation.vue'
-import OnePager from './components/OnePager.vue'
+import ToolBar from '@/components/ToolBar.vue'
 
 export default {
   name: 'LayoutDefault',
-
   components: {
-    ContactInformation,
-    OnePager
-  },
-
+    ToolBar,
+  }
 }
 </script>
