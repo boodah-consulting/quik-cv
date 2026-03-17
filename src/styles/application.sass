@@ -132,6 +132,10 @@ body
   #skills-list .skill b
     color: #333
 
+  .experience-projects-row
+    break-before: page
+    page-break-before: always
+
   .left-hand-side
     width: 65% !important
     float: left !important
@@ -146,12 +150,12 @@ body
     clear: none !important
     padding-left: 0.5rem
 
-  // Consistent section spacing - no forced page breaks
+  // Consistent section spacing
   .text-h6
     margin-top: 0.5rem
     margin-bottom: 0.3rem
 
-  // Ensure sections flow naturally without forced breaks
+  // Ensure sections flow naturally within pages
   section, .section
     margin-bottom: 0.5rem
     page-break-inside: auto

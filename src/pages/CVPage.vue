@@ -4,8 +4,8 @@
     <div class="q-px-xs q-py-xs row flex" v-if="audienceData">
       <span id="caption" class="col-12 text-small text-center" v-html="summaryHtml">
       </span>
-      <SkillsComponent :skills="audienceData.skills" />
-      <div class="row">
+       <SkillsComponent :skills="audienceData.skills" />
+      <div class="row experience-projects-row">
         <div class="col-8 left-hand-side">
           <JobsComponent :jobs="audienceData.jobs" />
         </div>
