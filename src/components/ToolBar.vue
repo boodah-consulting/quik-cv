@@ -4,6 +4,18 @@
       class="bg-primary text-white shadow-2"
       :class="{ 'floating-toolbar': isScrolled }"
     >
+    <q-btn 
+      flat 
+      round 
+      :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'" 
+      @click="toggleDarkMode"
+      class="q-mr-sm"
+    >
+      <q-tooltip>{{ $q.dark.isActive ? 'Light Mode' : 'Dark Mode' }}</q-tooltip>
+    </q-btn>
+
+    <q-separator dark vertical inset class="q-mr-sm" />
+
     <q-space />
 
     <q-breadcrumbs active-color="#CE4479" style="font-size: 16px" class="justify-center">
@@ -73,6 +85,7 @@
 <script>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import { useQuasar } from 'quasar'
 import { useProfileService } from '@/composables/useProfileService'
 
 export default {
@@ -81,6 +94,7 @@ export default {
   setup() {
     const router = useRouter()
     const route = useRoute()
+    const $q = useQuasar()
     const isScrolled = ref(false)
     
     const {
@@ -124,7 +138,16 @@ export default {
       })
     }
 
+    const toggleDarkMode = () => {
+      $q.dark.toggle()
+      localStorage.setItem('darkMode', $q.dark.isActive)
+    }
+
     onMounted(() => {
+      const savedDarkMode = localStorage.getItem('darkMode')
+      if (savedDarkMode !== null) {
+        $q.dark.set(savedDarkMode === 'true')
+      }
       window.addEventListener('scroll', handleScroll)
     })
 
@@ -139,7 +162,9 @@ export default {
       currentProfile,
       formatProfileName,
       selectProfileAndNavigate,
-      handleAudienceSelect
+      handleAudienceSelect,
+      toggleDarkMode,
+      $q
     }
   }
 }
