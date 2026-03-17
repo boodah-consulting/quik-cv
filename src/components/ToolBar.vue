@@ -95,6 +95,13 @@ export default {
     const router = useRouter()
     const route = useRoute()
     const $q = useQuasar()
+
+    // Restore theme immediately in setup() to prevent flash of wrong theme
+    const savedTheme = localStorage.getItem('darkMode')
+    if (savedTheme !== null) {
+      $q.dark.set(savedTheme === 'true')
+    }
+
     const isScrolled = ref(false)
     
     const {
@@ -144,10 +151,6 @@ export default {
     }
 
     onMounted(() => {
-      const savedDarkMode = localStorage.getItem('darkMode')
-      if (savedDarkMode !== null) {
-        $q.dark.set(savedDarkMode === 'true')
-      }
       window.addEventListener('scroll', handleScroll)
     })
 
