@@ -19,7 +19,7 @@ body.body--dark .highlight-chip {
 
 @media print {
   .body--dark .highlight-chip {
-    color: white !important;
+    color: #333 !important;
   }
 }
 </style>
