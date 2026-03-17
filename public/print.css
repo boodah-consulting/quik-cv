@@ -1,0 +1,17 @@
+@media print {
+  .experience {
+    page-break-inside: avoid !important;
+    break-inside: avoid-page !important;
+    display: block !important;
+    widows: 2 !important;
+    orphans: 2 !important;
+  }
+
+  .project-description {
+    page-break-inside: avoid !important;
+    break-inside: avoid-page !important;
+    display: block !important;
+    widows: 2 !important;
+    orphans: 2 !important;
+  }
+}
